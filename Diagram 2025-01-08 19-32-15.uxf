@@ -1,0 +1,45 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>792</x><y>64</y><w>168</w><h>152</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Package::Users
+User
+--
+-id: Long
+-name: String
+-email: String
+-password: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>608</x><y>272</y><w>168</w><h>152</h></coordinates><panel_attributes>Package::Users
+Freelancer
+--
+-id: Long
+-skills: String[]
+-interestFields: String[]
+-experienceYears: int
+-portifolio: String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>664</x><y>208</y><w>200</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;10;230;40;10;40;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>928</x><y>272</y><w>168</w><h>152</h></coordinates><panel_attributes>Package::Users
+Client
+--
+-enterpriseName: String
+-cnpj: String
+-address: String[]
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>872</x><y>208</y><w>176</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;200;40;200;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>296</x><y>72</y><w>168</w><h>152</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Package::Users
+UserFactory
+--
+-id: Long
+
+--
++ createUser(): User</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>456</x><y>128</y><w>352</w><h>32</h></coordinates><panel_attributes>lt=&lt;..
+create &gt;</panel_attributes><additional_attributes>420;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>296</x><y>272</y><w>168</w><h>152</h></coordinates><panel_attributes>Login
+--
+- userReposirtory: UserRepository
+--
++createUser() 
++login(): boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>368</x><y>216</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>272</y><w>168</w><h>152</h></coordinates><panel_attributes>&lt;&lt;Intrerface&gt;&gt;
+UserRepository
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>320</y><w>152</w><h>32</h></coordinates><panel_attributes>lt=-
+&lt; uses</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element></diagram>
