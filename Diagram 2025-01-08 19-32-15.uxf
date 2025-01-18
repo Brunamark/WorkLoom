@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1148</x><y>56</y><w>147</w><h>133</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>1640</x><y>80</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Package::domain.users
 User
 --
@@ -7,7 +7,7 @@ User
 -email: String
 -password: String
 -role:Role
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>924</x><y>238</y><w>238</w><h>182</h></coordinates><panel_attributes>Package::domain.users
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1320</x><y>340</y><w>340</w><h>260</h></coordinates><panel_attributes>Package::domain.users
 Freelancer
 --
 -skills: List&lt;Skill&gt;
@@ -18,7 +18,7 @@ Freelancer
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1036</x><y>182</y><w>175</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;10;230;40;10;40;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1246</x><y>238</y><w>231</w><h>182</h></coordinates><panel_attributes>Package::domain.users
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1480</x><y>260</y><w>250</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>230;10;230;40;10;40;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1780</x><y>340</y><w>330</w><h>260</h></coordinates><panel_attributes>Package::domain.users
 Client
 --
 -enterpriseName: String
@@ -27,35 +27,35 @@ Client
 -description: String
 -skills: List&lt;Skill&gt;
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1218</x><y>182</y><w>154</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;200;40;200;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>63</y><w>147</w><h>133</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1740</x><y>260</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;200;40;200;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>90</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Package::Users
 UserFactory
 --
 -id: Long
 
 --
-+ createUser(): User</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>854</x><y>112</y><w>308</w><h>28</h></coordinates><panel_attributes>lt=&lt;..
-create &gt;</panel_attributes><additional_attributes>420;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>714</x><y>238</y><w>147</w><h>133</h></coordinates><panel_attributes>Login
++ createUser(): User</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1220</x><y>160</y><w>440</w><h>40</h></coordinates><panel_attributes>lt=&lt;..
+create &gt;</panel_attributes><additional_attributes>420;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1020</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>Login
 --
 - userReposirtory: UserRepository
 --
 +createUser() 
 +login(): boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>777</x><y>189</y><w>21</w><h>63</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>238</y><w>147</w><h>133</h></coordinates><panel_attributes>&lt;&lt;Intrerface&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1110</x><y>270</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>340</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Intrerface&gt;&gt;
 UserRepository
 --
 
 --
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>595</x><y>280</y><w>133</w><h>28</h></coordinates><panel_attributes>lt=-
-&lt; uses</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1365</x><y>0</y><w>147</w><h>133</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>400</y><w>190</w><h>40</h></coordinates><panel_attributes>lt=-
+&lt; uses</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1950</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
 Package::domain.users
 Role
 --
 + CLIENT
-+ FREELANCER</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1288</x><y>42</y><w>91</w><h>98</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
++ FREELANCER</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1840</x><y>60</y><w>130</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
-m2=1</panel_attributes><additional_attributes>10;110;40;110;40;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1603</x><y>231</y><w>266</w><h>196</h></coordinates><panel_attributes>Package::domain.users
+m2=1</panel_attributes><additional_attributes>10;110;40;110;40;10;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>2290</x><y>330</y><w>380</w><h>280</h></coordinates><panel_attributes>Package::domain.users
 Address
 --
 
@@ -66,13 +66,13 @@ Address
 - zipCode: long
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1470</x><y>301</y><w>147</w><h>35</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>2100</x><y>430</y><w>210</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 
 m1=1
-m2=1...*</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1008</x><y>413</y><w>742</w><h>294</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1...*</panel_attributes><additional_attributes>10;20;190;20</additional_attributes></element><element><id>Relation</id><coordinates><x>1440</x><y>590</y><w>1060</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 
 m1=1
-m2=1</panel_attributes><additional_attributes>10;10;10;400;1030;400;1030;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>455</x><y>441</y><w>210</w><h>224</h></coordinates><panel_attributes>Package::FatClass
+m2=1</panel_attributes><additional_attributes>10;10;10;400;1030;400;1030;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>630</y><w>300</w><h>320</h></coordinates><panel_attributes>Package::FatClass
 FreelancerService
 --
 
@@ -91,7 +91,7 @@ FreelancerService
 +editSkills(skills: String)
 +addEnterprise(enterprise: String)
 +removeEnterprise(enterprise: String)
-+editEnterprise(enterprise: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>224</x><y>441</y><w>210</w><h>224</h></coordinates><panel_attributes>Package::FatClass
++editEnterprise(enterprise: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>630</y><w>300</w><h>320</h></coordinates><panel_attributes>Package::FatClass
 ClientService
 --
 
@@ -110,7 +110,7 @@ ClientService
 +editSkills(skills: String)
 +addDescription(description: String)
 +removeDescription(description: String)
-+editDescription(description: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>441</y><w>210</w><h>224</h></coordinates><panel_attributes>Package::FatClass
++editDescription(description: String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>630</y><w>300</w><h>320</h></coordinates><panel_attributes>Package::FatClass
 AddressService
 --
 
@@ -133,14 +133,14 @@ AddressService
 +editZipCode()
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1092</x><y>504</y><w>231</w><h>133</h></coordinates><panel_attributes>Package::domain.users
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1560</x><y>720</y><w>330</w><h>190</h></coordinates><panel_attributes>Package::domain.users
 Skill
 --
 -id: UUID
 -name: String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1106</x><y>413</y><w>91</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1580</x><y>590</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1=*
-m2=*</panel_attributes><additional_attributes>10;10;10;70;100;70;100;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1204</x><y>413</y><w>154</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=*</panel_attributes><additional_attributes>10;10;10;70;100;70;100;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1720</x><y>590</y><w>220</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 
 m1=*
-m2=*</panel_attributes><additional_attributes>190;10;190;70;10;70;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>98</x><y>350</y><w>371</w><h>105</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>510;10;10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>315</x><y>364</y><w>196</w><h>91</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>260;10;260;50;10;50;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>525</x><y>364</y><w>63</w><h>91</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;40;70;40;70;110</additional_attributes></element></diagram>
+m2=*</panel_attributes><additional_attributes>190;10;190;70;10;70;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>500</y><w>530</w><h>150</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>510;10;10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>520</y><w>280</w><h>130</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>260;10;260;50;10;50;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>520</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>10;10;10;40;70;40;70;110</additional_attributes></element></diagram>

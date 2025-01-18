@@ -2,13 +2,11 @@ package com.workloom.workloom_plataform.domain.users;
 
 import java.util.List;
 import jakarta.persistence.CollectionTable;
-import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,7 +45,7 @@ public class Freelancer extends User {
         name = "freelancer_experiences",
         joinColumns = @JoinColumn(name = "freelancer_id")
     )
-    private List<Integer> experiences;
+    private List<String> experiences;
 
     @ElementCollection
     @CollectionTable(
