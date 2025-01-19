@@ -1,11 +1,18 @@
 package com.workloom.workloom_plataform.domain.users;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,7 +39,23 @@ public abstract class User {
     @Column(nullable = false)
     private Role role;
 
+    @ManyToMany(cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+    @JoinTable(name = "user_skills", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "skill_id"))
+    private List<Skill> skills = new ArrayList<>();
 
-    
-    
-} 
+    public void addSkill(Skill skill) {
+        skills.add(skill);
+    }
+
+    public void removeSkill(Skill skill) {
+        skills.remove(skill);
+    }
+
+    public void editSkill(Skill oldSkill, Skill newSkill) {
+        int index = skills.indexOf(oldSkill);
+        if (index != -1) {
+            skills.set(index, newSkill);
+        }
+    }
+
+}

@@ -5,8 +5,6 @@ import jakarta.persistence.CollectionTable;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,13 +16,6 @@ import lombok.Setter;
 @Setter
 public class Freelancer extends User {
    
-    @ManyToMany
-    @JoinTable(
-        name = "freelancer_skills", 
-        joinColumns = @JoinColumn(name = "freelancer_id"), 
-        inverseJoinColumns = @JoinColumn(name = "skill_id")
-    )
-    private List<Skill> skills;
 
     @ElementCollection
     @CollectionTable(
