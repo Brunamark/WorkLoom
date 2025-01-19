@@ -21,5 +21,7 @@ public class Skill {
 
     @Column(nullable = true, unique = true)
     private String name;
+
+    
     
 }
