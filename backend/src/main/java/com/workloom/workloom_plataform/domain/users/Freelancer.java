@@ -3,8 +3,10 @@ package com.workloom.workloom_plataform.domain.users;
 import java.util.List;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,11 +19,7 @@ import lombok.Setter;
 public class Freelancer extends User {
    
 
-    @ElementCollection
-    @CollectionTable(
-        name = "freelancer_addresses",
-        joinColumns = @JoinColumn(name = "freelancer_id")
-    )
+    @Embedded
     private Address address;
 
     @ElementCollection
