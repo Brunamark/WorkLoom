@@ -1,6 +1,10 @@
-package com.workloom.workloom_plataform.domain.users;
+package com.workloom.workloom_plataform.domain.users.client;
 
 import java.util.List;
+
+import com.workloom.workloom_plataform.domain.users.User;
+import com.workloom.workloom_plataform.domain.users.embedded.Address;
+
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;

@@ -1,7 +1,8 @@
 package com.workloom.workloom_plataform.services;
 
-import com.workloom.workloom_plataform.domain.users.Client;
-import com.workloom.workloom_plataform.domain.users.Skill;
+import com.workloom.workloom_plataform.domain.users.client.Client;
+import com.workloom.workloom_plataform.domain.users.client.ClientRequestDTO;
+import com.workloom.workloom_plataform.domain.users.skill.Skill;
 import com.workloom.workloom_plataform.repository.ClientRepository;
 import com.workloom.workloom_plataform.repository.SkillRepository;
 
@@ -19,6 +20,20 @@ public class ClientService {
         this.clientRepository = clientRepository;
     }
 
+    public Client createClient(ClientRequestDTO data) {
+        Client client = new Client();
+        client.setName(data.getName());
+        client.setEmail(data.getEmail());
+        client.setPassword(data.getPassword());
+        client.setCnpj(data.getCnpj());
+        client.setRole(data.getRole());
+        client.setEnterpriseName(data.getEnterpriseName());
+        client.setSkills(data.getSkills());
+        ///client.setStreetName(data.getStreetName());
+
+
+        return clientRepository.save(client);
+    }
     private Client findClientById(UUID clientId) {
         return clientRepository.findById(clientId)
                 .orElseThrow(() -> new RuntimeException("Client not found!"));

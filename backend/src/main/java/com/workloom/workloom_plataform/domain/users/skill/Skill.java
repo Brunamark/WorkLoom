@@ -1,4 +1,4 @@
-package com.workloom.workloom_plataform.domain.users;
+package com.workloom.workloom_plataform.domain.users.skill;
 
 import java.util.UUID;
 import jakarta.persistence.Column;
