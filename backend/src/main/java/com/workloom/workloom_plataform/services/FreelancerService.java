@@ -3,9 +3,10 @@ package com.workloom.workloom_plataform.services;
 import java.util.ArrayList;
 import java.util.UUID;
 import org.springframework.stereotype.Service;
-import com.workloom.workloom_plataform.domain.users.Address;
-import com.workloom.workloom_plataform.domain.users.Freelancer;
-import com.workloom.workloom_plataform.domain.users.Skill;
+
+import com.workloom.workloom_plataform.domain.users.embedded.Address;
+import com.workloom.workloom_plataform.domain.users.freelancer.Freelancer;
+import com.workloom.workloom_plataform.domain.users.skill.Skill;
 import com.workloom.workloom_plataform.repository.FreelancerRepository;
 import com.workloom.workloom_plataform.repository.SkillRepository;
 

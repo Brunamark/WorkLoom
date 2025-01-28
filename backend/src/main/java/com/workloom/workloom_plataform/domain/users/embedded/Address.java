@@ -1,4 +1,4 @@
-package com.workloom.workloom_plataform.domain.users;
+package com.workloom.workloom_plataform.domain.users.embedded;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
@@ -24,5 +24,16 @@ public class Address {
 
     @Column(nullable = false)
     private long zipCode;
+
+    public Address() {
+    }
+
+    public Address(String streetName, int streetNumber, String city, String state, long zipCode) {
+        setStreetName(streetName);
+        setStreetNumber(streetNumber);
+        setCity(city);
+        setState(state);
+        setZipCode(zipCode);
+    }
 
 }

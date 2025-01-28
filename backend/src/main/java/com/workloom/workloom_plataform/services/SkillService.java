@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import com.workloom.workloom_plataform.domain.users.Skill;
+import com.workloom.workloom_plataform.domain.users.skill.Skill;
 import com.workloom.workloom_plataform.repository.SkillRepository;
 
 @Service
