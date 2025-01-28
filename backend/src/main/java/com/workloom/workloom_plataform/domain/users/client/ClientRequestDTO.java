@@ -3,24 +3,33 @@ package com.workloom.workloom_plataform.domain.users.client;
 import java.util.List;
 import java.util.UUID;
 import com.workloom.workloom_plataform.domain.users.Role;
+import com.workloom.workloom_plataform.domain.users.embedded.AddressDTO;
 import com.workloom.workloom_plataform.domain.users.skill.Skill;
 
 public class ClientRequestDTO {
     private UUID id;
     private String name;
     private String email;
-    private String password;
     private Role role;
     private List<Skill> skills;
     private String enterpriseName;
     private String cnpj;
-    private String streetName;
-    private int streetNumber;
-    private String city;
-    private String state;
-    private long zipCode;
     private String phone;
+    private List<AddressDTO> addresses;
 
+
+    public ClientRequestDTO() {
+    }
+
+    public ClientRequestDTO(String name, String email, Role role, List<Skill> skills, String enterpriseName, String cnpj, String phone) {
+        setName(name);
+        setEmail(email);
+        setRole(role);
+        setSkills(skills);
+        setEnterpriseName(enterpriseName);
+        setCnpj(cnpj);
+        setPhone(phone);
+    }
     // Getters
     public UUID getId() {
         return id;
@@ -34,9 +43,7 @@ public class ClientRequestDTO {
         return email;
     }
 
-    public String getPassword() {
-        return password;
-    }
+    
 
     public Role getRole() {
         return role;
@@ -54,26 +61,8 @@ public class ClientRequestDTO {
         return cnpj;
     }
 
-    public String getStreetName() {
-        return streetName;
-    }
-
-    public int getStreetNumber() {
-        return streetNumber;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public long getZipCode() {
-        return zipCode;
-    }
-
+    
+    
     public String getPhone() {
         return phone;
     }
@@ -89,10 +78,6 @@ public class ClientRequestDTO {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public void setRole(Role role) {
@@ -111,27 +96,16 @@ public class ClientRequestDTO {
         this.cnpj = cnpj;
     }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
-    }
-
-    public void setStreetNumber(int streetNumber) {
-        this.streetNumber = streetNumber;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public void setZipCode(long zipCode) {
-        this.zipCode = zipCode;
-    }
+   
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+    public List<AddressDTO> getAddresses() {
+        return addresses;
+    }
+    
+    public void setAddresses(List<AddressDTO> addresses) {
+        this.addresses = addresses;
     }
 }
