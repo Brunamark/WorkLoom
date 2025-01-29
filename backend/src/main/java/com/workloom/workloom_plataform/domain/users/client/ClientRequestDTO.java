@@ -1,5 +1,6 @@
 package com.workloom.workloom_plataform.domain.users.client;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import com.workloom.workloom_plataform.domain.users.Role;
@@ -15,7 +16,8 @@ public class ClientRequestDTO {
     private String enterpriseName;
     private String cnpj;
     private String phone;
-    private List<AddressDTO> addresses;
+    private List<AddressDTO> addresses = new ArrayList<>();
+    private String password;
 
 
     public ClientRequestDTO() {
@@ -29,6 +31,7 @@ public class ClientRequestDTO {
         setEnterpriseName(enterpriseName);
         setCnpj(cnpj);
         setPhone(phone);
+        
     }
     // Getters
     public UUID getId() {
@@ -65,6 +68,10 @@ public class ClientRequestDTO {
     
     public String getPhone() {
         return phone;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     // Setters
@@ -108,4 +115,5 @@ public class ClientRequestDTO {
     public void setAddresses(List<AddressDTO> addresses) {
         this.addresses = addresses;
     }
+    
 }

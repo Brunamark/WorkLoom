@@ -30,7 +30,7 @@ public class Client extends User {
 
     
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String name;
     private String email;
@@ -38,6 +38,7 @@ public class Client extends User {
     private List<Skill> skills;
     private String enterpriseName;
     private String cnpj;
+    @Column(name = "phone")
     private String phone;
     @ElementCollection
     @CollectionTable(name = "client_addresses", joinColumns = @JoinColumn(name = "client_id"))
@@ -48,8 +49,10 @@ public class Client extends User {
 
 
     public Client() {
+        this.id = UUID.randomUUID();
     }
     public Client(String name, String email, Role role, List<Skill> skills, String enterpriseName, String cnpj,String phone, List<Address> address) {
+        this();
         setName(name);
         setEmail(email);
         setRole(role);
@@ -58,6 +61,7 @@ public class Client extends User {
         setCnpj(cnpj);
         setPhone(phone);
         setAddress(address);
+        this.createdAt = LocalDateTime.now();
     }
 
 }
