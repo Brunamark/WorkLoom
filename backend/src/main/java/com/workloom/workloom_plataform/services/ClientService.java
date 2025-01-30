@@ -1,7 +1,6 @@
 package com.workloom.workloom_plataform.services;
 
 import com.workloom.workloom_plataform.domain.users.client.Client;
-import com.workloom.workloom_plataform.domain.users.client.ClientRequestDTO;
 import com.workloom.workloom_plataform.domain.users.embedded.Address;
 import com.workloom.workloom_plataform.domain.users.embedded.AddressDTO;
 import com.workloom.workloom_plataform.domain.users.skill.Skill;
